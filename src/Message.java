@@ -1,22 +1,22 @@
-public class Message {
-    String sender;
-    String[] receiver;
+public class Message extends Ums {
     String messageContent;
     String attachedFile;
-    String sendState;
-    MessageTime sendTime;
-    MessageTime receiveTime;
+
+    Message() {
+        //생성자
+    }
 
     boolean attachFile(String photo){
         attachedFile = photo;
         return true;
     }
 
-    MessageTime reserveSendTime(MessageTime mt){
-        return new MessageTime();
+    UmsTime reserveSendTime(UmsTime umsTime){
+
+        return new UmsTime();
     }
 
-    String sendMessage(Message m) {
+    String send() {
 
         return sendState;
     }
@@ -24,6 +24,7 @@ public class Message {
     boolean canSend(Message m){ // 발송가능여부
 
         return true;
+
     }
 
 }
