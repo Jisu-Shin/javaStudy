@@ -16,11 +16,6 @@ public class Message extends Ums {
         return new UmsTime();
     }
 
-    String send() {
-
-        return sendState;
-    }
-
     boolean canSend(Message m){ // 발송가능여부
 
         return true;

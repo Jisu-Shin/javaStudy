@@ -3,5 +3,6 @@ public class Main {
         System.out.println("Hello world!");
         Message m = new Message();
         System.out.println(m.canSend(m));
+        System.out.println(m.send());
     }
 }

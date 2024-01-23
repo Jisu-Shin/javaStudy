@@ -9,4 +9,8 @@ public class Ums {
         // 생성자
 
     }
+
+    String send() {
+        return sendState;
+    }
 }
