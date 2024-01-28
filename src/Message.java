@@ -4,6 +4,7 @@ public class Message extends Ums {
 
     Message() {
         //생성자
+        super();
     }
 
     boolean attachFile(String photo){
@@ -12,14 +13,20 @@ public class Message extends Ums {
     }
 
     UmsTime reserveSendTime(UmsTime umsTime){
-
-        return new UmsTime();
+        if (umsTime.isValidSendTime())  {
+            super.sendTime = umsTime;
+        } else {
+            // TODO  유효한 시간이 아닐 경우는 ?
+        }
+        return super.sendTime;
     }
 
     boolean canSend(Message m){ // 발송가능여부
-
         return true;
+    }
 
+    void setMessageContent(String messageContent){
+        this.messageContent = messageContent;
     }
 
 }
