@@ -9,7 +9,7 @@ class UmsDtTest {
     void isValidDt(){
         String dt = "20240931";
         UmsDt umsDt = new UmsDt();
-        assertEquals(false, umsDt.isValidDt(dt));
+        assertEquals(false, umsDt.isValidDt(dt)); 
     }
 
 }
