@@ -47,7 +47,12 @@ public class GirlGroup extends Artist {
         return "GirlGroup{" +
                 "name='" + name + '\'' +
                 ", debutDt=" + debutDt +
+                ", members=" + memberList.size() +
                 '}';
+    }
+
+    public void setName(String name) {
+        super.name = name;
     }
 
     public String getName() {
