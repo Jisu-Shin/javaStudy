@@ -18,7 +18,7 @@ public class GirlGroup extends Artist {
 
     // 코드의 중복을 제거하기 위해 생성자들끼리 서로 호출하도록 구현
     public GirlGroup() {
-        super();
+        this("none");
     }
 
     public GirlGroup(String name) {
@@ -47,7 +47,7 @@ public class GirlGroup extends Artist {
         return "GirlGroup{" +
                 "name='" + name + '\'' +
                 ", debutDt=" + debutDt +
-                ", members=" + memberList.size() +
+                ", type='" + type + '\'' +
                 '}';
     }
 

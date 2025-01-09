@@ -1,41 +1,49 @@
-
->[!important] 목표
->UMS 발송을 객체지향 코드로 작성해보자
-
-
-## 요구사항 리스트
-1. 문자보낼때 필요한 필드
-	- 발송자, 수신자, 문자메시지내용 , 발송일시, 발송상태 
-2. 제약조건
-	1. 문자는 8시~20시까지만 발송할 수 있다 
-	2. 문자내용을 변경할 수 있게 MessageFormat 을 사용해본다
-	3. mms 사진도 발송이 가능하도록 한다
-	4. 발송자 1 : 수신자 N 구조이다
-3. 데이터검증
-	- 발송일시 맞는 규격에 들어왔는지 검증이 필요
-4. 필수값
-	- 보내는이, 받는이, 문자내용
-
->[!add] 강의듣고 추가한 내역
-문자
-> - 고객에게 문자를 보낼 수 있다
-> - 문자발송 내역을 조회할 수 있다
-> - ***문자 도메인 설계
-> 
->이메일
-
-	
-
-## 확장해서 생각해볼 리스트
-- 상속관계표현 : UMS (부모) <- [SMS/이메일/팩스] (자식)
-- UMS에서는 보내는이 받는이 발송일시는 동일하게 들어간다.
-- 발송상태는 클래스 마다 다름
+### Chapter 6 실습내용
+- 클래스변수, 인스턴스 변수
+  - 클래스 변수를 사용할때는 참조변수.cv를 쓰는 것보다 클래스명.cv로 사용하는걸 권장
+```mermaid
+classDiagram
+    class GirlGroup{ 
+        $int cv
+      ArrayList<Member> memberList
+      $void staticMethod()
+      +joinGroup()
+      +leaveGroup()
+      +toString()
+    }
+```
 
 
+### Chapter 7 실습내용
+- 상속과 포함
+  - 기존에 작성한 GirlGroup 클래스가 Artist의 클래스를 상속받게 구현했다
+  - 부모클래스인 Artist <- 자손클래스인 GirlGroup
+  - 추후 Artist 클래스를 상속받는 BoyGroup, Solo, Actor 클래스 구현도 가능하다
+  - 공통된 속성을 Artist 클래스로 올렸다
+- 오버라이딩 
+  - toString() 메서드로 오버라이딩 했다
+- 접근제어자
+  - name 과 debut을 protected로 선언해서 다른 패키지
+~~~java 
+/ch7/Artist.java
+public class Artist {
+    protected String name;
+    protected LocalDate debutDt;
+~~~
+~~~java
+/ch6/GirGroup.java
+  public void setName(String name) {
+    super.name = name;
+  }
 
-# 오류사항
-실제 있는 날찌인지 검사하기 위해 `SimpleDateformat.setLenient(false)` 을 해줘야 했다
--> LocalDate, LocalTime쓰면 안해도 됨
+  public String getName() {
+    return name;
+  }
 
+  public LocalDate getDebutDt() {
+    return debutDt;
+  }
+~~~
 
-sms.send()
+  
+
