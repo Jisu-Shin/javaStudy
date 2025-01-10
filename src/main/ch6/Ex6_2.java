@@ -1,5 +1,8 @@
 package main.ch6;
 
+import main.company.GirlGroup;
+import main.company.Member;
+
 import java.time.LocalDate;
 
 public class Ex6_2 {
