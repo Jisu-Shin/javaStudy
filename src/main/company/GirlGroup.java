@@ -11,6 +11,7 @@ public class GirlGroup extends Artist{
     };
 
     // 인스턴스 변수
+    ArtistType type;
     // 포함
     final ArrayList<Member> memberList;
 
@@ -28,7 +29,7 @@ public class GirlGroup extends Artist{
     }
 
     public GirlGroup(String name, LocalDate debutDt) {
-        super(name, debutDt, "GirlGroup");
+        super(name, debutDt, ArtistType.GIRL_GROUP);
         memberList = new ArrayList<>();
     }
 

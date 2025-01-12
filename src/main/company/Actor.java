@@ -8,7 +8,7 @@ public class Actor extends Artist{
     }
 
     public Actor(String name, LocalDate debutDt) {
-        super(name, debutDt, "Actor");
+        super(name, debutDt, ArtistType.ACTOR);
     }
 
     void act() {
