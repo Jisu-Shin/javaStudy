@@ -12,10 +12,10 @@ public class Actor extends Artist{
     }
 
     void act() {
-        System.out.println(name+"가 연기를 한다");
+        System.out.println(super.getName()+"가 연기를 한다");
     }
 
     void casting() {
-        System.out.println(name+"가 캐스팅이 되었다");
+        System.out.println(super.getName()+"가 캐스팅이 되었다");
     }
 }

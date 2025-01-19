@@ -52,11 +52,8 @@ public class Polymorphism {
 
     @Test
     void 참조변수와인스턴스연결() {
-        Artist a = new GirlGroup();
-        GirlGroup g = new GirlGroup();
-
-        System.out.println("a = " + a);
-        System.out.println("g = " + g);
+        System.out.println("참조변수가 Artist => " + snsd);
+        System.out.println("참조변수가 Girl Group => " + redvelvet);
     }
 
     @Test

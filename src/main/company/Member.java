@@ -1,16 +1,26 @@
 package main.company;
 
+import java.time.LocalDate;
+
 /*Group만 멤버를 가진다*/
 public class Member {
     String name;
-    Gender gender;
+    LocalDate birth;
 
-    public Member(String name) {
-        this.name = name;
+    public Member(String name){
+        this(name, LocalDate.now());
     }
 
-    public Member(String name, Gender gender) {
+    public Member(String name, LocalDate birth) {
         this.name = name;
-        this.gender = gender;
+        this.birth = birth;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

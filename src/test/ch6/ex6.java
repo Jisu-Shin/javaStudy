@@ -1,15 +1,29 @@
-package main.ch6;
+package ch6;
 
 import main.company.GirlGroup;
 import main.company.Member;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-public class Ex6_2 {
-    public static void main(String[] args) {
+public class ex6 {
+    @Test
+    void 객체생성() {
+        GirlGroup snsd = new GirlGroup();
+        GirlGroup redVelvet = new GirlGroup();
+
+        snsd.setName("소녀시대");
+        System.out.println(snsd);
+
+        redVelvet.setName("레드벨벳");
+        System.out.println(redVelvet);
+    }
+
+    @Test
+    void cv_iv_생성() {
         System.out.println("객체생성 없이 사용이 가능한 cv" + GirlGroup.cv);
 
-        GirlGroup snsd = new GirlGroup("소녀시대",LocalDate.of(2007,8,5));
+        GirlGroup snsd = new GirlGroup("소녀시대", LocalDate.of(2007,8,5));
         snsd.joinGroup(new Member("윤아"));
         snsd.joinGroup(new Member("태연"));
         snsd.joinGroup(new Member("티파니"));

@@ -1,9 +1,8 @@
 package main.company;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class GirlGroup extends Artist{
+public class GirlGroup extends Group{
     // TODO static 변수 , 메서드
     public static int cv = 10;
     public static void staticMethod() {
@@ -12,8 +11,6 @@ public class GirlGroup extends Artist{
 
     // 인스턴스 변수
     ArtistType type;
-    // 포함
-    final ArrayList<Member> memberList;
 
     // 코드의 중복을 제거하기 위해 생성자들끼리 서로 호출하도록 구현
     public GirlGroup() {
@@ -24,50 +21,31 @@ public class GirlGroup extends Artist{
         this(name, LocalDate.now());
     }
 
-    public GirlGroup(LocalDate debutDt) {
-        this("none", LocalDate.now());
-    }
-
     public GirlGroup(String name, LocalDate debutDt) {
         super(name, debutDt, ArtistType.GIRL_GROUP);
-        memberList = new ArrayList<>();
     }
 
     public void sing() {
-        System.out.println(name+"이 노래를 한다");
+        System.out.println(super.getName()+"이 노래를 한다");
     }
 
     public void release() {
-        System.out.println(name+"이 앨범을 발매했다");
+        System.out.println(super.getName()+"이 앨범을 발매했다");
     }
 
-    public void joinGroup(Member m){
-        staticMethod();
-        memberList.add(m);
-    }
-
-    public void leaveGroup(Member m) {
-        memberList.remove(m);
+    // TODO
+    @Override
+    void setType() {
+        this.type = ArtistType.GIRL_GROUP;
     }
 
     @Override
     public String toString() {
         return "GirlGroup{" +
-                "name='" + name + '\'' +
-                ", debutDt=" + debutDt +
+                "name='" + super.getName() + '\'' +
+                ", debutDt=" + super.getDebutDt() +
                 ", type='" + type + '\'' +
                 '}';
     }
 
-    public void setName(String name) {
-        super.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public LocalDate getDebutDt() {
-        return debutDt;
-    }
 }
