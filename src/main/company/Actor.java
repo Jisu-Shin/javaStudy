@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Actor extends Artist{
     public Actor(String name) {
-        super(name);
+        this(name,LocalDate.now());
     }
 
     public Actor(String name, LocalDate debutDt) {

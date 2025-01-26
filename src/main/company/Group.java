@@ -2,10 +2,11 @@ package main.company;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Group extends Artist {
 
-    final ArrayList<Member> memberList = new ArrayList<>();
+    protected final List<Member> memberList = new ArrayList<>();
 
     public Group(String name, LocalDate debutDt, ArtistType type) {
         super(name, debutDt, type);
@@ -25,11 +26,11 @@ public abstract class Group extends Artist {
         return result;
     }
 
-    public void joinGroup(Member m){
+    public void addMember(Member m){
         memberList.add(m);
     }
 
-    public void leaveGroup(Member m) {
+    public void removeMember(Member m) {
         memberList.remove(m);
     }
 

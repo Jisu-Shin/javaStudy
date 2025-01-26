@@ -33,6 +33,10 @@ public class GirlGroup extends Group{
         System.out.println(super.getName()+"이 앨범을 발매했다");
     }
 
+    @Deprecated
+    public void joinGroup(Member member) {
+    }
+
     // TODO
     @Override
     void setType() {

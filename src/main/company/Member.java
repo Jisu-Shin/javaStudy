@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 /*Group만 멤버를 가진다*/
 public class Member {
-    String name;
-    LocalDate birth;
+    private String name;
+    private LocalDate birth;
 
     public Member(String name){
         this(name, LocalDate.now());
@@ -18,9 +18,5 @@ public class Member {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

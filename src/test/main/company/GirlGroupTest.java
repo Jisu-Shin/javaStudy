@@ -15,7 +15,8 @@ class GirlGroupTest {
         GirlGroup snsd = new GirlGroup("소녀시대");
         snsd.joinGroup(yoona);
 
-        Assertions.assertEquals(snsd.getMemberCnt(),1);
+        // joinGroup() 메소드 사용안함
+        Assertions.assertEquals(snsd.getMemberCnt(),0);
     }
 
 }
