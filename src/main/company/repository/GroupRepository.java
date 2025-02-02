@@ -1,7 +1,7 @@
 package main.company.repository;
 
-import main.company.Group;
-import main.company.Member;
+import main.company.domain.Group;
+import main.company.domain.Member;
 
 public interface GroupRepository {
 

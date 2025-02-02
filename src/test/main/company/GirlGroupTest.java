@@ -1,5 +1,7 @@
 package main.company;
 
+import main.company.domain.GirlGroup;
+import main.company.domain.Member;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

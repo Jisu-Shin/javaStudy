@@ -1,6 +1,6 @@
 package main.company.repository;
 
-import main.company.Artist;
+import main.company.domain.Artist;
 
 import java.util.ArrayList;
 import java.util.List;

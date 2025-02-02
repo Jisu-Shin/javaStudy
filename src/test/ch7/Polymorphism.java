@@ -1,9 +1,9 @@
 package ch7;
 
 import main.broadcast.Awards;
-import main.company.Actor;
-import main.company.Artist;
-import main.company.GirlGroup;
+import main.company.domain.Actor;
+import main.company.domain.Artist;
+import main.company.domain.GirlGroup;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

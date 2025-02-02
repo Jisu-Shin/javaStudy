@@ -1,7 +1,7 @@
 package ch6;
 
-import main.company.GirlGroup;
-import main.company.Member;
+import main.company.domain.GirlGroup;
+import main.company.domain.Member;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

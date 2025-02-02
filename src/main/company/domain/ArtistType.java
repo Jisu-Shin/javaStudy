@@ -1,4 +1,4 @@
-package main.company;
+package main.company.domain;
 
 public enum ArtistType {
     GIRL_GROUP ,

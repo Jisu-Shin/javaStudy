@@ -1,8 +1,8 @@
 package main.company.repository;
 
-import main.company.Artist;
-import main.company.GirlGroup;
-import main.company.Solo;
+import main.company.domain.Artist;
+import main.company.domain.GirlGroup;
+import main.company.domain.Solo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,7 +1,7 @@
 package main.company.repository;
 
 
-import main.company.Artist;
+import main.company.domain.Artist;
 
 import java.util.List;
 
